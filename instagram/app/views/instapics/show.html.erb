@@ -12,5 +12,9 @@
 
 <p><%= image_tag @instapic.picture_url(:medium) %></p>
 
+<%= link_to "Add Comment", new_comment_path(instapic_id: @instapic.id) %>
+
+<%= link_to "View Comments", comments_path %>
+
 <%= link_to 'Edit', edit_instapic_path(@instapic) %> |
 <%= link_to 'Back', instapics_path %>

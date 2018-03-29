@@ -16,6 +16,7 @@ class InstapicsController < ApplicationController
   # GET /instapics/new
   def new
     @instapic = Instapic.new
+    @comment = Comment.new(instapic_id: params[:instapic_id])
   end
 
   # GET /instapics/1/edit

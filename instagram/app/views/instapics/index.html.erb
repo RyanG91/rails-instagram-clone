@@ -5,10 +5,10 @@
 <table class="table">
   <thead>
     <tr>
-      <th>Image</th>
       <th>Picture</th>
       <th>Caption</th>
       <th>User</th>
+      <th>Instapic Number</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -19,6 +19,7 @@
         <td><%= image_tag instapic.picture_url(:thumb) %></td>
         <td><%= instapic.caption %></td>
         <td><%= instapic.user.email %></td>
+        <td><%= instapic.id %></td>
         <td><%= link_to 'Show', instapic %></td>
         <td><%= link_to 'Edit', edit_instapic_path(instapic) %></td>
         <td><%= link_to 'Destroy', instapic, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -30,3 +31,4 @@
 <br>
 
 <%= link_to 'New Instapic', new_instapic_path %>
+<%= link_to 'Comments', comments_path %>
